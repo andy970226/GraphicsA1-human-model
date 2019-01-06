@@ -1,0 +1,63 @@
+<?xml version="1.0"?>
+<!-- hierachrical definition of a character -->
+<doc>
+    <node type="freejoint" name="root">
+    	<geom type="cube" name="body" color="0.16 0.675 0.745" center="0 2 0" scale="3 3 2">
+    		
+    		<node name="belly" type="ballxyz" position="0 -1.9 0">
+    			<geom name="belly" type="cube" center="0 -1 0" scale="2 2 1.5"
+    				color="0.984 0.925 0.725">
+    				
+    				<node name="haunch" type="ballxyz" position="0 -1 0">
+    					<geom name="haunchg" type="cube" scale="3 1 1.5" color="0.607 0.368 0.016"
+    						center="0 -1 0">
+    					<node type="ballxyz" name="left thigh" position="0.75 -0.8 0">
+    					<geom type="cube" name="left thighg" color="0.984 0.925 0.725" center="0.75 -1.5 0" scale="1.5 3 1.5">
+    						<node type="hinge" axis="1 0 0" name="leftknee"
+    							position="0 -1.8 0">
+    						<geom name="leftcalf" center="0 -3.3 0" scale="0.6 4 0.6" type="sphere" color="0.944 0.905 0.725">
+    							</geom></node></geom>
+    				</node>
+    					<node type="ballxyz" position="-0.75 -0.8 0" name="right thigh">
+    						<geom type="cube" scale="1.5 3 1.5" name="right thighg" center="-0.75 -1.5 0"
+    							color="0.984 0.925 0.725">
+    							<node axis="1 0 0" type="hinge" name="rightknee"
+    								position="0 -1.8 0">
+    								<geom name="rightcalf" type="sphere"
+    									color="0.944 0.905 0.725" center="0 -3.3 0"
+    									scale="0.6 4 0.6">
+    								</geom>
+    							</node>
+    						</geom></node></geom></node>
+    			</geom>
+    		</node>
+    		<geom center="-0.8 0 0.9" name="brestright" color="0.121 0.537 0.596" scale="0.7 0.7 0.7" type="sphere"></geom><geom type="sphere" scale="0.7 0.7 0.7" center="0.8 0 0.9" color="0.121 0.537 0.596" name="brestleft">
+    			</geom>
+    		<node name="rightshoulder" type="ballxyz" position="2 1 0">
+    			<geom name="rightshoulderg" type="cube" center="1.5 0.5 0" scale="3 1 1" color="0.984 0.925 0.725">
+    				<node type="hinge" name="rightelbow" position="1.5 0 0" axis="0 -1 0">
+    					<geom center="1.4 0 0" color="0.944 0.905 0.725" type="sphere" name="righthand"
+    						scale="1.4 0.5 0.5">
+    					</geom></node>
+    			</geom>
+    		</node><node name="leftshoulder" type="ballxyz" position="-2 1 0">
+    			<geom name="leftshoulderg" type="cube" center="-1.5 0.5 0" scale="3 1 1"
+    				color="0.984 0.925 0.725">
+    				<node name="leftelbow" type="hinge" position="-1.5 0 0" axis="0 1 0">
+    					<geom name="lefthand" scale="1.4 0.5 0.5" center="-1.4 0 0" type="sphere"
+    						color="0.944 0.905 0.725">
+    					</geom></node>
+    			</geom>
+    		</node>
+    		<node name="neck" position="0 2.1 0" type="ballxyz"><geom type="sphere" center="0 2.2 0" scale="1 1.9 1" name="head" color="0.984 0.855 0.725">
+	<node type="hinge" name="hair" axis="-1 0 0" position="0 1.1 -0.1">
+		<geom name="hairg" type="cube" color="0.6 0 0.5" center="0 0.5 0" scale="1.7 1.3 2.4">
+			<node name="braid" type="ballxyz" position="0 0.3 -2">
+				<geom name="braidg" color="0.7 0.05 0.55" scale="0.4 4 0.4" type="cube" center="0 0 0"></geom>
+			</node></geom>
+	</node>
+</geom></node>
+    	</geom>
+    	
+    </node>
+</doc>
